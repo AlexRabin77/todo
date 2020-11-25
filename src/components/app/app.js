@@ -10,7 +10,7 @@ import './app.css';
 
 const initState = {
     items: [
-        { id: 1, label: 'Go to the bank', important: false, done: false, edit: false },
+        { id: 1, label: 'Go to the bank', important: false, done: true, edit: false },
         { id: 2, label: 'Perform an exercise', important: true, done: false, edit: false },
         { id: 3, label: 'Drink cofee', important: false, done: false, edit: false }
     ],
