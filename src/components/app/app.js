@@ -17,9 +17,10 @@ const initState = {
     filter: 'all',
     search: ''
 };
+const MAX_ID = initState.items.length + 1;
 
 const App = () => {
-    const [nextId, setNextId] = useState(100);
+    const [nextId, setNextId] = useState(MAX_ID);
     const [items, setItems] = useState(initState.items);
     const [filter, setFilter] = useState(initState.filter);
     const [search, setSearch] = useState(initState.search);
@@ -101,7 +102,7 @@ const App = () => {
     const onSave = (id, value) => {
         const index = items.findIndex((item) => item.id === id);
         const item = { ...items[index], label: value };
-        const updated =  [
+        const updated = [
             ...items.slice(0, index),
             item,
             ...items.slice(index + 1)

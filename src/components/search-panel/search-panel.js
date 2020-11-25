@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 import './search-panel.css';
 
-const SearchPanel = ({onSearchChange}) => {
+const SearchPanel = ({ onSearchChange }) => {
     const [term, setTerm] = useState('');
 
     const onTermChange = (e) => {
